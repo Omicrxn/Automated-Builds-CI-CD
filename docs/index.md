@@ -30,7 +30,7 @@ Jenkins is an open-source and free automation server where the central build and
 ## 2. Circle CI
 This tool enables automation across the user's pipeline in all the stages. One key benefit of it is that you can easily integrate CircleCI with GitHub and Bitbucket to create builds whenever you push a new commit with new code lines. It uses a container or virtual machine to build, it has a fast testing and deployment is continuous and branch-specific. Another great feature of it is that it is quite customisable and has a fast setup and unlimited construction. It has three plans, one free, one starting at 30$/month and another customizable plan to support enterprise needs. The free plan however is good for simple projects or testing, it can only run 1 job at a time and has a 2,500 free credits a week (credits are used to pay for the team's usage). If your project is Open-Source it also offers three more free containers.
 
-## 3. GitLab && Buddy
+## 3. GitLab & Buddy
 
 GitLab and Buddy are two more tools which are compatible with GitHub and Bitbucket. They both offer a good free plan and have a git environment ready for you to use. The two offer you to build jobs with Docker containers and are highly used by developers. However Buddy might have less users and a smaller community but they are both good options to be included in the list.
 
