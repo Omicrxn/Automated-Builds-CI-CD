@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+##Introduction
+CI/CD pipelines are one of the best practices for DevOps because they deliver code changes with more reliability and speed.
 
-You can use the [editor on GitHub](https://github.com/Omicrxn/Automated-Builds-CI-CD/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+## What is CI/CD
+Continuous integration (CI) and continuous delivery (CD) are a set of practices that make possible for developers and teams to deliver more solid code changes and with more regularity. This method also known as CI/CD pipeline allows developers to focus on quality, requirements and security since the building and deployment are automated.
+A Continuous Integration process is a software development procedure in which all code changes are merged into a central repository multiple times a day. 
+Continuous Delivery is a project management practice that automates the entire release process in addition to Continuous Integration.
+With CI, each 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Elements of a CI/CD pipeline
 
-### Markdown
+An CI/CD pipeline is a proven set of processes that allow developers to deliver new versions of software. Those steps would still have to be performed by humans if there were no automated pipeline. There are commonly a couple of stages involved in software releases:
+### Source stage
+The pipeline run is initiated by a source code repository. Whenever a change in code is detected the CI/CD tool runs the pipeline. Furthermore, triggers can be automatically scheduled or initiatied by the user.
+### Build stage
+We merge the source code and its dependencies to create a working version of our software that we will ultimately deliver to our customers. Depending on the programming language we use, compilation may be required or not in this step. Cloud-native software is typically deployed with Docker, which is a service that allow us to deliver software packages (called containers) which are isolated between them. This allow us to separate our applications from our infrastructure to deliver the product quickly.
+### Test stage
+During this stage, we execute automated tests to verify the validity of our program and the functionality of our service. This stage serves as a protective shield, preventing quickly reproducible errors from affecting consumers. It is the developers' duty to write the tests and it is a great practice to do so while we are adding new features to the program.
+### Deploy stages
+Finally, now that we have a build that has passed all our tests we are ready to deploy the program. The software can be deployed to the users in a production state or it can also be deployed internally as an alpha or a beta. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Omicrxn/Automated-Builds-CI-CD/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Why use a CI/CD pipeline
+Using a pipeline can bring to the team and to the final product a lot of benefits. The most notorious one is that developers doesn't need to loose time doing all those steps since it is automated and they can focuse on other things like improving the code quality, or writing new features. It is also benefitial to the QA team since they can have access to the latest version of the system which has passed all the tests setted by the developers and that means that some errors have already been taken care of. CI/CD pipelines allow to roll back to a previous version very easily.
