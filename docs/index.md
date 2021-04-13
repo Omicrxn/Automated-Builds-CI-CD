@@ -22,9 +22,18 @@ Finally, now that we have a build that has passed all our tests we are ready to 
 # Why use a CI/CD pipeline
 Using a pipeline can bring to the team and to the final product a lot of benefits. The most notorious one is that developers doesn't need to loose time doing all those steps since it is automated and they can focuse on other things like improving the code quality, or writing new features. It is also benefitial to the QA team since they can have access to the latest version of the system which has passed all the tests setted by the developers and that means that some errors have already been taken care of. CI/CD pipelines allow to roll back to a previous version very easily.
 
-# How to set up a CI/CD pipeline for your project
-Now that it has been explained what a CI/CD pipeline is, it is time to get to the task. We will create our pipeline basing it on 4 key principles: Simplicity, repeatability and felixibility. Note that the process may be different depending on the platform you choose to deploy your project, the language or framework you use, or any other factor that is chosen by the developer or team. However the services you select should have a documentation explaining the process.
-## 1. Choosing the best CI/CD tool
+# Choosing the best CI/CD tool
 Recently, DevOps have been given more and more importance and thanks to that many tools to help with your deployments have appeared. The tool you choose may depend on your project needs, programming language or your personal preference. However some of the best choices to look at are:
-### 1.Jenkins:
+## 1. Jenkins:
 Jenkins is an open-source and free automation server where the central build and CI process takes place. It supports the construction, deployment and automation of your projects helped by hundreds of plugins. Some of the key features are that it is has a really easy installation in the most used OS, it's interface is really userfriendly, it has a huge growing community which at the same time develops plugins to use in Jenkins.
+
+## 2. Circle CI
+This tool enables automation across the user's pipeline in all the stages. One key benefit of it is that you can easily integrate CircleCI with GitHub and Bitbucket to create builds whenever you push a new commit with new code lines. It uses a container or virtual machine to build, it has a fast testing and deployment is continuous and branch-specific. Another great feature of it is that it is quite customisable and has a fast setup and unlimited construction. It has three plans, one free, one starting at 30$/month and another customizable plan to support enterprise needs. The free plan however is good for simple projects or testing, it can only run 1 job at a time and has a 2,500 free credits a week (credits are used to pay for the team's usage). If your project is Open-Source it also offers three more free containers.
+
+## 3. GitLab && Buddy
+
+GitLab and Buddy are two more tools which are compatible with GitHub and Bitbucket. They both offer a good free plan and have a git environment ready for you to use. The two offer you to build jobs with Docker containers and are highly used by developers. However Buddy might have less users and a smaller community but they are both good options to be included in the list.
+
+# Setting Up a CI/CD environment
+
+
