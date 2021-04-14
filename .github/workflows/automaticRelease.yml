@@ -2,7 +2,7 @@
 
 name: Release Generator
 
-# When a new push with a tag that fits the one replaced on the ' * ' field is called, the event is triggered
+# When a new push with a tag is called, the event is triggered
 on: 
   push:
     tags:
