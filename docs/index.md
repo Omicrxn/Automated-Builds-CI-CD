@@ -69,25 +69,77 @@ First of all we should be in our repository on GitHub and click the Actions butt
 
 ### Step 2
 In the Get Started screen of GitHub Actions you can find a lot of preset workflows for CD, for CI and for other events or purposes inside GitHub like handling issues. You may choose the one that fits best with your objectives and project or create your own workflow. For demonstration purposes I used the basic workflow available in the Continuous Integration section.
-![Step 1](Images/step_2)
+![Step 2](Images/step_2.png)
 
 ### Step 3
 Now that we chose our workflow template, this specific workflow does a checkout of our repo and runs a set of commands using the OS shell.
-![Step 1](Images/step_3)
+![Step 3](Images/step_3.png)
 
 ### Step 4 
 Actually that is all we need to do to successfully have our GitHub Actions ready to go but I am going to analyse the code to let you know how it is structured. The workflow code is showed in the image below. First of all the **name** fields are optional and just for describing or naming the part of the code you are running. Then we find the **on**, inside of it we will have the events that we want to listen for. As we can see we are listening for a **push** or a **pull_request** on the master branch. **Workflow_dispatch** is used to specify workflows that are manually triggered. Now for our second main part of the code, the **jobs** section is where we will list the actions that we want to be triggered when our events happen. In this case it will **build** our workflow on a server that **runs-on** ubuntu in the latest version, we can specify here any OS or even multiple of them. Finally the next section of our **jobs** is the **steps**. Here we list the actions or commands that we want to be executed, in this example we run some commands on the OS shell.
-![Step 1](Images/step_4)
+![Step 4](Images/step_4.png)
 
 ### Step 5
 After our workflow code is correct, we proceed to do a comit. In this case since the commit will also push the code to our repository, the workflow will be activated.
-![Step 1](Images/step_5)
+![Step 5](Images/step_5.png)
 
 ### Step 6 
 To check if our Workflow works correctly, we need to go to the Actions tab again and instead of the Get started page we will see our Workflows page. On the right side we will have a list of all our workflows and in the center we will have the runs executed by our workflow.
-![Step 1](Images/step_6)
+![Step 6](Images/step_6.png)
 
 ### Step 7
 If we click on our workflow run, we will see if there have been any errors or if it was successfully built.
-![Step 1](Images/step_7)
-![Step 1](Images/step_8)
+![Step 7](Images/step_7.png)
+![Step 8](Images/step_8.png)
+
+# Bonus: GitHub Actions to create an automatic release.
+As a Bonus section, I am going to explain how to use the above process to automatically create a release.
+To begin with, I expect that the above Workflow has been implemented, if you haven't already, pleas do before continuing with the explanation. After we have our starter workflow enabled and running, we can modify it by changing the *.yml* file generated on our repo following the path (.github/workflows). For this Actions we will use two premade Actions on the GitHub [marketplace](https://github.com/marketplace): [Zip Release](https://github.com/marketplace/actions/zip-release) and [Create Release](https://github.com/marketplace/actions/create-release). We will use those Actions by using the command **uses** under our steps section. It works as a library would work in other programming languages. The workspace shoul look as follows: 
+```yml
+# This is a basic workflow to generate a zip and a release using GitHub Actions
+
+name: Release Generator
+
+# When a new push with a tag that fits the one replaced on the ' * ' field is called, the event is triggered
+on: 
+  push:
+    tags:
+    - '*'
+
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # We are generating the zip excluding the gitignore (or any other file specified in the exclusions)
+     - uses: actions/checkout@v2
+     - name: Zip Generator
+       uses: thedoctor0/zip-release@master 
+       with:
+        filename: 'release.zip'
+        exclusions: '*.gitignore*'
+      # Creates a release uploading the release.zip file. The github token is usually under secrets.GITHUB_TOKEN, however in the future this may be different.
+     - name: Create Release
+       uses: ncipollo/release-action@v1.8.3
+       with:
+        tag: ${{ startsWith(github.ref, 'refs/tags/') }}
+        artifacts: "release.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}```
+# Webgraphy
+[Agile Alliance: Automated Builds](https://www.agilealliance.org/glossary/automated-build)
+[Perforce: Build Automation 101](https://www.perforce.com/blog/vcs/build-automation)
+[Synopsys: DevOps](https://www.perforce.com/blog/vcs/build-automation)
+[GitHub Actions Tutorial-Basic Conecpts and CI/CD Pipeline with Docker](https://www.youtube.com/watch?v=R8_veQiYBjI&ab_channel=TechWorldwithNana)
+[dawntraoz](https://www.dawntraoz.com/blog/how-to-add-ci-to-frontend-project-with-github-actions/)
+[Medium:What is CI/CD Pipeline](https://medium.com/@nanduribalajee/what-is-ci-cd-pipeline-e2f25db99bbe)
+[Medium: DevOps is a culture, not a role](https://medium.com/@nanduribalajee/what-is-ci-cd-pipeline-e2f25db99bbe)
+[GitLab](https://about.gitlab.com)
+[Jenkins](https://www.jenkins.io)
+[CircleCI](https://circleci.com)
+[GitHub Actions](https://github.com/features/actions)
+[How to set Up a CI/CD Pipeline](https://enterprisersproject.com/article/2020/1/cicd-pipeline-how-set-up)
+[Semaphoreci: CI/CD Pipeline: A Gentle Introduction](https://semaphoreci.com/blog/cicd-pipeline)
+[SmartBear: The Key to an Effective CI/CD Pipeline: Automated Testing](https://smartbear.com/learn/automated-testing/the-continuous-development-pipeline/)
