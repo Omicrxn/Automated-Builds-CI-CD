@@ -1,0 +1,83 @@
+﻿  Enemy.cpp
+  EntityManager.cpp
+  Font.cpp
+  GuiButton.cpp
+  GuiCheckBox.cpp
+  GuiManager.cpp
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\GuiManager.cpp(14,2): warning C4065: switch statement contains 'default' but no 'case' labels
+  GuiSlider.cpp
+  Item.cpp
+  Main.cpp
+  App.cpp
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\App.cpp(218,37): warning C4018: '<': signed/unsigned mismatch
+  Audio.cpp
+  Input.cpp
+  Map.cpp
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Map.cpp(204,20): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Map.cpp(212,10): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Map.cpp(299,33): warning C4838: conversion from 'uint32' to 'int' requires a narrowing conversion
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Map.cpp(299,62): warning C4838: conversion from 'uint32' to 'int' requires a narrowing conversion
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Map.cpp(300,22): warning C4838: conversion from 'uint32' to 'int' requires a narrowing conversion
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Map.cpp(300,47): warning C4838: conversion from 'uint32' to 'int' requires a narrowing conversion
+  Pathfinding.cpp
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Point.h(111,24): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=int
+          ]
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Point.h(107): message : while compiling class template member function 'TYPE Point<TYPE>::DistanceTo(const Point<TYPE> &) const'
+          with
+          [
+              TYPE=int
+          ]
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Pathfinding.cpp(161): message : see reference to function template instantiation 'TYPE Point<TYPE>::DistanceTo(const Point<TYPE> &) const' being compiled
+          with
+          [
+              TYPE=int
+          ]
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\PathFinding.h(79): message : see reference to class template instantiation 'Point<int>' being compiled
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Point.h(111,15): warning C4244: 'return': conversion from 'float' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=int
+          ]
+  Player.cpp
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Player.cpp(23,95): warning C4244: '-=': conversion from 'float' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=int
+          ]
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Player.cpp(24,96): warning C4244: '+=': conversion from 'float' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=int
+          ]
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Player.cpp(26,93): warning C4244: '-=': conversion from 'float' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=int
+          ]
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Player.cpp(30,35): warning C4244: '+=': conversion from 'float' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=int
+          ]
+  SceneEnding.cpp
+  SceneGameplay.cpp
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\SceneGameplay.cpp(20,10): warning C4101: 'h': unreferenced local variable
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\SceneGameplay.cpp(20,7): warning C4101: 'w': unreferenced local variable
+  SceneLogo.cpp
+  SceneManager.cpp
+  Render.cpp
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Render.cpp(264,39): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Render.cpp(264,39): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Game\Source\Render.cpp(268,46): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  SceneTitle.cpp
+  Textures.cpp
+  Window.cpp
+  Log.cpp
+  pugixml.cpp
+  Generating Code...
+  Game.vcxproj -> D:\Documents\School\Universidad\Year 2\Proj 2\Research\Automated-Builds-CI-CD\DemoGame\Build\Debug\Game.exe
