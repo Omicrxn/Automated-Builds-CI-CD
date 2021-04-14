@@ -1,13 +1,13 @@
 This is a research created by Alejandro Ávila Rodríguez ([Omicrxn](https://github.com/Omicrxn)) for Project II subject in the Bachelor's degree in Videogame Design and Development at UPC/CITM University. The teacher supervising this project is Ramon Santamaría ([Raysan5](https://github.com/raysan5)).
 
-# Automated Builds and Dev Ops
+# Automated Builds and DevOps
 The process of building in software development describes the conversion of files and other assets to create a software product that works in its intended final form. Although it can differ between programming languages or frameworks, this procedure includes compiling source files, packaging compiled files into compressed formats, producing installers and creating or updating database schemas if needed. Hence, automated builds are generated whenever the prerequisites mentioned above can be repeated at any time, do not require human intervention, and only use the information contained in the source code. Build automation is a prerequisite to Continuous Integration since it is used by CI to detect issues early, that allows Continuous Testing and Continuous Delivery to be possible, however, this will be seen further in the research. The combination of those three processes along with other practices and tools that allow organizations, teams and developers to deliver software faster and more efficiently than in traditional development is named DevOps. To sum up, DevOps is a group of techniques in which automated builds, CI and CD are contained that allow developers to deploy high-speed quality products.
 ![DevOps](Images/devops_cycle.png)
 
 # What is CI/CD
 CI/CD pipelines are one of the best practices for DevOps because they deliver code changes with more reliability and speed. Continuous integration (CI) and continuous delivery (CD) are a set of practices that make possible for developers and teams to deliver more solid code changes and with more regularity. This method also known as CI/CD pipeline allows developers to focus on quality, requirements and security since the building and deployment are automated. A Continuous Integration process is a software development procedure in which all code changes are merged into a central repository multiple times a day.  Continuous Delivery is a project management practice that automates the entire release process in addition to Continuous Integration.
 
-# Elements of a CI/CD pipeline
+# Elements of a CI/CD Pipeline
 
 An CI/CD pipeline is a proven set of processes that allow developers to deliver new versions of software. Those steps would still have to be performed by humans if there were no automated pipeline. There are commonly a couple of stages involved in software releases:
 ## Source stage
@@ -77,7 +77,7 @@ Now that we chose our workflow template, this specific workflow does a checkout 
 ![Step 3](Images/step_3.png)
 
 ### Step 4 
-Actually that is all we need to do to successfully have our GitHub Actions ready to go but I am going to analyse the code to let you know how it is structured. The workflow code is showed in the image below. First of all the **name** fields are optional and just for describing or naming the part of the code you are running. Then we find the **on**, inside of it we will have the events that we want to listen for. As we can see we are listening for a **push** or a **pull_request** on the master branch. **Workflow_dispatch** is used to specify workflows that are manually triggered. Now for our second main part of the code, the **jobs** section is where we will list the actions that we want to be triggered when our events happen. In this case it will **build** our workflow on a server that **runs-on** ubuntu in the latest version, we can specify here any OS or even multiple of them. Finally the next section of our **jobs** is the **steps**. Here we list the actions or commands that we want to be executed, in this example we run some commands on the OS shell.
+Actually that is all we need to do to successfully have our GitHub Actions ready to go but I am going to analyse the code to let you know how it is structured. The workflow code is showed in the image below. First of all the **name** fields are optional and just for describing or naming the part of the code you are running. Then we find the **on**, inside of it we will have the events that we want to listen for. As we can see we are listening for a **push** or a **pull_request** on the master branch. **Workflow_dispatch** is used to specify workflows that are manually triggered. Now for our second main part of the code, the **jobs** section is where we will list the actions that we want to be triggered when our events happen. In this case it will **build** our workflow on a server that **runs-on** ubuntu in the latest version, we can specify here any OS or even multiple of them. Finally the next section of our **jobs** is the **steps**. Here we list the actions or commands that we want to be executed, in this example we run some commands on the OS shell. 
 ![Step 4](Images/step_4.png)
 
 ### Step 5
@@ -101,11 +101,13 @@ To begin with, I expect that the above Workflow has been implemented, if you hav
 
 name: Release Generator
 
-# When a new push with a tag that fits the one replaced on the ' * ' field is called, the event is triggered
+# When a new push with a tag is called, the event is triggered
 on: 
   push:
+    branches:
+      - master
     tags:
-    - '*'
+      -v1.*
 
 jobs:
   # This workflow contains a single job called "build"
@@ -118,15 +120,15 @@ jobs:
       # We are generating the zip excluding the gitignore (or any other file specified in the exclusions)
      - uses: actions/checkout@v2
      - name: Zip Generator
-       uses: thedoctor0/zip-release@master 
+       uses: thedoctor0/zip-release@master
        with:
         filename: 'release.zip'
         exclusions: '*.gitignore*'
       # Creates a release uploading the release.zip file. The github token is usually under secrets.GITHUB_TOKEN, however in the future this may be different.
      - name: Create Release
-       uses: ncipollo/release-action@v1.8.3
+       uses: ncipollo/release-action@v1
        with:
-        tag: ${{ startsWith(github.ref, 'refs/tags/') }}
+        tag: $
         artifacts: "release.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
