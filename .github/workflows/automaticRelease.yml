@@ -31,4 +31,4 @@ jobs:
        with:
         tag: $
         artifacts: "release.zip"
-        token: $
+        token: ${{ secrets.GITHUB_TOKEN }}
