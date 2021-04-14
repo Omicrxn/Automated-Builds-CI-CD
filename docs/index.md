@@ -131,17 +131,17 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
 # Webgraphy
-[Agile Alliance: Automated Builds](https://www.agilealliance.org/glossary/automated-build)</br>
-[Perforce: Build Automation 101](https://www.perforce.com/blog/vcs/build-automation)</br>
-[Synopsys: DevOps](https://www.perforce.com/blog/vcs/build-automation)</br>
-[GitHub Actions Tutorial-Basic Conecpts and CI/CD Pipeline with Docker](https://www.youtube.com/watch?v=R8_veQiYBjI&ab_channel=TechWorldwithNana)</br>
-[dawntraoz](https://www.dawntraoz.com/blog/how-to-add-ci-to-frontend-project-with-github-actions/)</br>
-[Medium:What is CI/CD Pipeline](https://medium.com/@nanduribalajee/what-is-ci-cd-pipeline-e2f25db99bbe)</br>
-[Medium: DevOps is a culture, not a role](https://medium.com/@nanduribalajee/what-is-ci-cd-pipeline-e2f25db99bbe)</br>
-[GitLab](https://about.gitlab.com)</br>
-[Jenkins](https://www.jenkins.io)</br>
-[CircleCI](https://circleci.com)</br>
-[GitHub Actions](https://github.com/features/actions)</br>
-[How to set Up a CI/CD Pipeline](https://enterprisersproject.com/article/2020/1/cicd-pipeline-how-set-up)</br>
-[Semaphoreci: CI/CD Pipeline: A Gentle Introduction](https://semaphoreci.com/blog/cicd-pipeline)</br>
-[SmartBear: The Key to an Effective CI/CD Pipeline: Automated Testing](https://smartbear.com/learn/automated-testing/the-continuous-development-pipeline/)</br>
+[Agile Alliance: Automated Builds](https://www.agilealliance.org/glossary/automated-build)  
+[Perforce: Build Automation 101](https://www.perforce.com/blog/vcs/build-automation)  
+[Synopsys: DevOps](https://www.perforce.com/blog/vcs/build-automation)  
+[GitHub Actions Tutorial-Basic Conecpts and CI/CD Pipeline with Docker](https://www.youtube.com/watch?v=R8_veQiYBjI&ab_channel=TechWorldwithNana)  
+[dawntraoz](https://www.dawntraoz.com/blog/how-to-add-ci-to-frontend-project-with-github-actions/)  
+[Medium:What is CI/CD Pipeline](https://medium.com/@nanduribalajee/what-is-ci-cd-pipeline-e2f25db99bbe)  
+[Medium: DevOps is a culture, not a role](https://medium.com/@nanduribalajee/what-is-ci-cd-pipeline-e2f25db99bbe)  
+[GitLab](https://about.gitlab.com)  
+[Jenkins](https://www.jenkins.io)  
+[CircleCI](https://circleci.com)  
+[GitHub Actions](https://github.com/features/actions)  
+[How to set Up a CI/CD Pipeline](https://enterprisersproject.com/article/2020/1/cicd-pipeline-how-set-up)  
+[Semaphoreci: CI/CD Pipeline: A Gentle Introduction](https://semaphoreci.com/blog/cicd-pipeline)  
+[SmartBear: The Key to an Effective CI/CD Pipeline: Automated Testing](https://smartbear.com/learn/automated-testing/the-continuous-development-pipeline/)  
