@@ -61,3 +61,33 @@ An event is an activity that triggers a workflow. You can have events for things
 Jobs are the actions performed when an event is triggered. Jobs run in parallel by default but they can also run sequentially if you define dependencies on other jobs.
 ### Steps
 As the name indicates the steps are the secuence of tasks that a job should perform. The tasks are divided in actions and commands. Actions are specific tasks that may depend on your purposes and commands are OS terminal code lines that you can run from GitHub Actions. An important thing to note is that GitHub has a repository with a lot of premade actions which can be checked [here](https://github.com/actions).
+
+## Setting Up Actions
+### Step 1
+First of all we should be in our repository on GitHub and click the Actions button as seen in the image below(its location might change in the future). This will take us to the GitHub Actions start panel.
+![Step 1](Images/step_1.png)
+
+### Step 2
+In the Get Started screen of GitHub Actions you can find a lot of preset workflows for CD, for CI and for other events or purposes inside GitHub like handling issues. You may choose the one that fits best with your objectives and project or create your own workflow. For demonstration purposes I used the basic workflow available in the Continuous Integration section.
+![Step 1](Images/step_2)
+
+### Step 3
+Now that we chose our workflow template, this specific workflow does a checkout of our repo and runs a set of commands using the OS shell.
+![Step 1](Images/step_3)
+
+### Step 4 
+Actually that is all we need to do to successfully have our GitHub Actions ready to go but I am going to analyse the code to let you know how it is structured. The workflow code is showed in the image below. First of all the **name** fields are optional and just for describing or naming the part of the code you are running. Then we find the **on**, inside of it we will have the events that we want to listen for. As we can see we are listening for a **push** or a **pull_request** on the master branch. **Workflow_dispatch** is used to specify workflows that are manually triggered. Now for our second main part of the code, the **jobs** section is where we will list the actions that we want to be triggered when our events happen. In this case it will **build** our workflow on a server that **runs-on** ubuntu in the latest version, we can specify here any OS or even multiple of them. Finally the next section of our **jobs** is the **steps**. Here we list the actions or commands that we want to be executed, in this example we run some commands on the OS shell.
+![Step 1](Images/step_4)
+
+### Step 5
+After our workflow code is correct, we proceed to do a comit. In this case since the commit will also push the code to our repository, the workflow will be activated.
+![Step 1](Images/step_5)
+
+### Step 6 
+To check if our Workflow works correctly, we need to go to the Actions tab again and instead of the Get started page we will see our Workflows page. On the right side we will have a list of all our workflows and in the center we will have the runs executed by our workflow.
+![Step 1](Images/step_6)
+
+### Step 7
+If we click on our workflow run, we will see if there have been any errors or if it was successfully built.
+![Step 1](Images/step_7)
+![Step 1](Images/step_8)
