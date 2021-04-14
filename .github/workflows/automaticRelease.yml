@@ -6,7 +6,7 @@ name: Release Generator
 on: 
   push:
     branches:
-      - main
+      - master
     tags:
       -v1.*
 
