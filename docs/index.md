@@ -40,7 +40,7 @@ This tool enables automation across the user's pipeline in all the stages. One k
 
 ## 4. GitLab
 
-GitLab is another popular tool for DevOps which is based on the web and also features a Git repository manager. It has a very competitive free plan bringing you most of GitLab's potential with 400 minutes of CI/CD per month. It may be another great option for begginers who want to get their hands dirty on the DevOps world without paying.
+GitLab is another popular tool for DevOps which is based on the web and also features a Git repository manager. It is a platform for automating developer workflows and CI/CD is justo one of the many workflows it offers. It has a very competitive free plan bringing you most of GitLab's potential with 400 minutes of CI/CD per month. It may be another great option for begginers who want to get their hands dirty on the DevOps world without paying.
 ![Jenkins](https://github.com/Omicrxn/Automated-Builds-CI-CD/blob/master/docs/Images/gitlab.png)
 
 # Setting Up a CI/CD environment with GitHub Actions
