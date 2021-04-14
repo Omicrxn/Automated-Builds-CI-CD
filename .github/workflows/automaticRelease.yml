@@ -5,8 +5,10 @@ name: Release Generator
 # When a new push with a tag is called, the event is triggered
 on: 
   push:
+    branches:
+      - main
     tags:
-    - '*'
+      -v1.*
 
 jobs:
   # This workflow contains a single job called "build"
