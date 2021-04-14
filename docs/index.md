@@ -48,6 +48,10 @@ GitLab is another popular tool for DevOps which is based on the web and also fea
 
 ![Jenkins](Images/gitlab.png)
 
+I will also attach a table with the free tier storage and minutes/month of each tool.
+
+![Market Study](Images/market.png)
+
 # Setting Up a CI/CD environment with GitHub Actions
 Even though there are multiple tools reviewed above, this explanation will be shown using GitHub Actions. However it is highly encouraged to do your own research of other tools that may adapt to your needs better.
 
@@ -62,6 +66,8 @@ An event is an activity that triggers a workflow. You can have events for things
 Jobs are the actions performed when an event is triggered. Jobs run in parallel by default but they can also run sequentially if you define dependencies on other jobs.
 ### Steps
 As the name indicates the steps are the sequence of tasks that a job should perform. The tasks are divided into actions and commands. Actions are specific tasks that may depend on your purposes and commands are OS terminal code lines that you can run from GitHub Actions. An important thing to note is that GitHub has a repository with a lot of premade actions that can be checked [here](https://github.com/actions).
+
+[Basics](Images/basics.png)
 
 ## Setting Up Actions
 ### Step 1
