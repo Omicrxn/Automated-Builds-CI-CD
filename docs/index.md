@@ -101,11 +101,13 @@ To begin with, I expect that the above Workflow has been implemented, if you hav
 
 name: Release Generator
 
-# When a new push with a tag that fits the one replaced on the ' * ' field is called, the event is triggered
+# When a new push with a tag is called, the event is triggered
 on: 
   push:
+    branches:
+      - master
     tags:
-    - '*'
+      -v1.*
 
 jobs:
   # This workflow contains a single job called "build"
@@ -118,15 +120,15 @@ jobs:
       # We are generating the zip excluding the gitignore (or any other file specified in the exclusions)
      - uses: actions/checkout@v2
      - name: Zip Generator
-       uses: thedoctor0/zip-release@master 
+       uses: thedoctor0/zip-release@master
        with:
         filename: 'release.zip'
         exclusions: '*.gitignore*'
       # Creates a release uploading the release.zip file. The github token is usually under secrets.GITHUB_TOKEN, however in the future this may be different.
      - name: Create Release
-       uses: ncipollo/release-action@v1.8.3
+       uses: ncipollo/release-action@v1
        with:
-        tag: ${{ startsWith(github.ref, 'refs/tags/') }}
+        tag: $
         artifacts: "release.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
