@@ -50,5 +50,15 @@ GitLab is another popular tool for DevOps which is based on the web and also fea
 # Setting Up a CI/CD environment with GitHub Actions
 Even though there are multiple tools reviewed above, this explanation will be shown using GitHub Actions. However it is highly encouraged to do your own research of other tools that may adapt to your needs better.
 
+## Basic Concepts of GitHub Actions
+Before we start creating our actions and pipelines, I will review the basic concepts of GitHub Actions in order to understand better the steps to create our pipeline.
 
+### Workflows
+Developers use several workflows along the development process and even though tools like Git and GitHub makes our life easier, there are still a lot of tasks that require our time. For instance, if someone creates an issue we still have to rate it as minor/major bug, assign it to a contributor, review the pull request, see if the bug is fixed, prepare the release note, and a lot of tasks that follow such as the testing, building and deployment. A repository can have multiple contributors that would make the task of reviewing issues really time consuming and complicated, so for problems like this example, GitHub Actions comes to the rescue. In GitHub Actions you can create your workflows where you can listen to Events and run Jobs. This way we can forget about tasks like the issue reviewing, the building of our repository or the deployment. Furthermore, GitHub Actions has a lot of presets with a huge variety of combinations based on languages, tools, frameworks...
+### Events
+An event is an activity that triggers a workflow. You can have events for things as Issue creation, Pull request merging, commits and a lot of other events that are listed on the docs in the following [link](https://docs.github.com/en/actions/reference/events-that-trigger-workflows).
+### Jobs
+Jobs are the actions performed when an event is triggered. Jobs run in parallel by default but they can also run sequentially if you define dependencies on other jobs.
+### Steps
+As the name indicates the steps are the secuence of tasks that a job should perform. The tasks are divided in actions and commands. Actions are specific tasks that may depend on your purposes and commands are OS terminal code lines that you can run from GitHub Actions. An important thing to note is that GitHub has a repository with a lot of premade actions which can be checked [here](https://github.com/actions).
 
