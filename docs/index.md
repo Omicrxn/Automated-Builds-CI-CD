@@ -40,13 +40,13 @@ Jenkins is an open-source and free automation server where the central build and
 ## 3. [CircleCI](https://circleci.com)
 This tool enables automation across the user's pipeline in all the stages. One key benefit of it is that you can easily integrate CircleCI with GitHub and Bitbucket to create builds whenever you push a new commit with new code lines. It uses a container or virtual machine to build, it has fast testing and deployment is continuous and branch-specific. Another great feature of it is that it is quite customisable and has a fast setup and unlimited construction. It has three plans, one free, one starting at 30$/month and another customizable plan to support enterprise needs. The free plan however is good for simple projects or testing, it can only run 1 job at a time and has a 2,500 free credits a week (credits are used to pay for the team's usage). If your project is Open-Source it also offers three more free containers.
 
-![Jenkins](Images/circle_ci.png)
+![CircleCI](Images/circle_ci.png)
 
 ## 4. [GitLab](https://about.gitlab.com)
 
 GitLab is another popular tool for DevOps which is based on the web and also features a Git repository manager. It is a platform for automating developer workflows and CI/CD is just one of the many workflows it offers. It has a very competitive free plan bringing you most of GitLab's potential with 400 minutes of CI/CD per month. It may be another great option for beginners who want to get their hands dirty on the DevOps world without paying.
 
-![Jenkins](Images/gitlab.png)
+![GitLab](Images/gitlab.png)
 
 I will also attach a table with the free tier storage and minutes/month of each tool.
 
@@ -67,7 +67,7 @@ Jobs are the actions performed when an event is triggered. Jobs run in parallel 
 ### Steps
 As the name indicates the steps are the sequence of tasks that a job should perform. The tasks are divided into actions and commands. Actions are specific tasks that may depend on your purposes and commands are OS terminal code lines that you can run from GitHub Actions. An important thing to note is that GitHub has a repository with a lot of premade actions that can be checked [here](https://github.com/actions).
 
-[Basics](Images/basics.png)
+![Basics](Images/basics.png)
 
 ## Setting Up Actions
 ### Step 1
