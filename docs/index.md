@@ -61,4 +61,3 @@ An event is an activity that triggers a workflow. You can have events for things
 Jobs are the actions performed when an event is triggered. Jobs run in parallel by default but they can also run sequentially if you define dependencies on other jobs.
 ### Steps
 As the name indicates the steps are the secuence of tasks that a job should perform. The tasks are divided in actions and commands. Actions are specific tasks that may depend on your purposes and commands are OS terminal code lines that you can run from GitHub Actions. An important thing to note is that GitHub has a repository with a lot of premade actions which can be checked [here](https://github.com/actions).
-
