@@ -21,7 +21,7 @@ jobs:
       # We are generating the zip excluding the gitignore (or any other file specified in the exclusions)
      - uses: actions/checkout@v2
      - name: Zip Generator
-       uses: thedoctor0/zip-release@master 
+       uses: thedoctor0/zip-release@master
        with:
         filename: 'release.zip'
         exclusions: '*.gitignore*'
