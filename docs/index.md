@@ -142,7 +142,8 @@ jobs:
 # Bonus II: Github Actions to build Visual Studio exe and upload release automatically
 This code allows to use GitHub Actions to generate a .exe and zip it as needed on every commit, plus adding the files to the release every time you create one release.
 
-```name: Windows
+```yml
+name: Windows
 
 on: 
   push:
